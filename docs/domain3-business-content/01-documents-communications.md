@@ -71,3 +71,6 @@ Microsoft 365 app은 결과물의 lifecycle에 따라 연결됩니다.
 - 기존 document는 다른 format이나 audience에 맞게 변환할 수 있습니다.
 - Management summary는 decision, impact, risk, action 중심입니다.
 - App 사이 이동 시 data integrity와 permission을 다시 확인합니다.
+
+!!! info "출처"
+    [Microsoft Learn - Microsoft 365 Copilot overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview#copilot-features-in-microsoft-365-apps), [Microsoft Support - Draft and add content with Copilot in Word](https://support.microsoft.com/en-us/office/draft-and-add-content-with-copilot-in-word-069c91f0-9e42-4c9a-bbce-fddf5d581541), [Microsoft Learn - Study guide for Exam AB-730](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-730#draft-business-documents-and-communications)

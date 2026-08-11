@@ -19,3 +19,6 @@
 
 !!! abstract "요약"
     Copilot response는 model만으로 결정되지 않습니다. 현재 app, prompt, Microsoft Graph를 통해 접근 가능한 업무 data, web grounding, 사용자의 permission이 함께 결과를 구성합니다. Copilot은 사용자가 원래 볼 수 없는 조직 data에 새 permission을 부여하지 않습니다.
+
+!!! info "출처"
+    [Microsoft Learn - Study guide for Exam AB-730](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-730#understand-generative-ai-fundamentals-25-30), [Microsoft Learn - Microsoft 365 Copilot overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)

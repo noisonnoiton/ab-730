@@ -20,3 +20,6 @@
 
 !!! abstract "요약"
     Copilot의 핵심 가치는 빈 화면에서 초안을 만드는 데 그치지 않습니다. 기존 content를 변환하고, 여러 app의 data와 insight를 연결하며, meeting 이후의 결정과 action을 reusable content로 만드는 데 있습니다.
+
+!!! info "출처"
+    [Microsoft Learn - Study guide for Exam AB-730](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-730#draft-and-analyze-business-content-by-using-ai-25-30), [Microsoft Learn - Microsoft 365 Copilot overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)

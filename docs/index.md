@@ -22,3 +22,6 @@ Microsoft 365 Copilot과 agent를 사용해 일상 업무 생산성을 높이고
 
 !!! warning "최신 기능"
     Microsoft 365 Copilot 기능과 UI는 자주 변경됩니다. 이 문서는 2026년 7월 22일 skills measured를 기준으로 하며, 실제 기능은 Microsoft Learn과 tenant 환경에서 다시 확인해야 합니다.
+
+!!! info "출처"
+    [Microsoft Learn - Study guide for Exam AB-730](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-730), [Microsoft Learn - Microsoft 365 Copilot overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)

@@ -82,3 +82,6 @@
 
 !!! note "시험 범위 해석"
     Microsoft의 objective bullet은 평가 방식을 보여 주는 예시이며 관련 주제가 함께 출제될 수 있습니다. 대부분 GA feature를 다루지만 널리 쓰이는 Preview feature가 포함될 수도 있습니다.
+
+!!! info "출처"
+    [Microsoft Learn - AB-730 exam page](https://learn.microsoft.com/en-us/credentials/certifications/exams/ab-730/), [Microsoft Learn - Study guide for Exam AB-730](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-730), [Microsoft Learn - Exam scoring and score reports](https://learn.microsoft.com/en-us/credentials/certifications/exam-scoring-reports)

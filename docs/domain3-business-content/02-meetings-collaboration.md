@@ -66,3 +66,6 @@ Page로 옮길 때는 필요 없는 prompt나 sensitive detail을 제거하고 �
 - Decision과 action item은 human review 후 확정합니다.
 - Copilot Pages는 response를 shared, editable artifact로 전환합니다.
 - Memory와 instruction은 지속 context이며 최신 사실의 source를 대신하지 않습니다.
+
+!!! info "출처"
+    [Microsoft Support - Use Copilot in Microsoft Teams meetings](https://support.microsoft.com/en-us/office/use-copilot-in-microsoft-teams-meetings-0bf9dd3c-96f7-44e2-8bb8-790bedf066b1), [Microsoft Learn - Manage Copilot personalization and memory](https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-personalization-memory), [Microsoft Learn - Microsoft 365 Copilot app features](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-app-overview#app-features-and-benefits)

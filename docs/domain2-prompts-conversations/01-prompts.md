@@ -69,3 +69,6 @@ Follow-up이 다른 주제로 크게 이동하면 새 conversation을 시작해 
 - Task에 직접 관련된 authoritative resource를 선택합니다.
 - 검증된 반복 prompt는 저장, 예약, 공유로 운영합니다.
 - 자동화해도 output 검토 책임은 사라지지 않습니다.
+
+!!! info "출처"
+    [Microsoft Learn - Schedule Copilot prompts](https://learn.microsoft.com/en-us/microsoft-365/copilot/scheduled-prompts), [Microsoft Support - Sharing prompts with a team](https://support.microsoft.com/en-us/topic/sharing-prompts-with-a-team-2fa7a228-8645-4dc4-beec-d75d6d0bc752), [Microsoft Learn - Study guide for Exam AB-730](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-730#create-and-manage-prompts-in-microsoft-365-copilot)

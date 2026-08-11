@@ -47,3 +47,6 @@ Notebook은 관련 conversation과 reference를 한곳에 모아 특정 project�
 
 !!! tip "시험 포인트"
     단순히 과거 기록을 다시 보는 것은 conversation history, 장기 주제의 conversation과 source를 함께 관리하는 것은 notebook이 적합합니다.
+
+!!! info "출처"
+    [Microsoft Support - Revisit your Microsoft 365 Copilot Chat history](https://support.microsoft.com/en-us/topic/revisit-your-microsoft-365-copilot-chat-history-6ea899e3-3bb1-450a-a2ae-220341ac193a), [Microsoft Support - Get started with Microsoft 365 Copilot Notebooks](https://support.microsoft.com/en-us/topic/get-started-with-microsoft-365-copilot-notebooks-0775e693-11c6-4d80-8aba-fcc81a737a06), [Microsoft Learn - Overview of Microsoft 365 Copilot Chat](https://learn.microsoft.com/en-us/copilot/overview)

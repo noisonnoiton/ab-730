@@ -22,3 +22,6 @@
 
 !!! abstract "요약"
     좋은 prompt는 목표, context, source, 기대 결과를 분명히 합니다. 반복성이 커질수록 저장, 예약, 공유를 사용하고, 안정된 instruction과 knowledge가 필요하면 agent로 발전시킵니다.
+
+!!! info "출처"
+    [Microsoft Learn - Study guide for Exam AB-730](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-730#manage-prompts-and-conversations-by-using-ai-35-40), [Microsoft Learn - Overview of Microsoft 365 Copilot Chat](https://learn.microsoft.com/en-us/copilot/overview)

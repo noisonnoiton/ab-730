@@ -27,3 +27,6 @@
 
 !!! note "용어 사용"
     Microsoft 365 Copilot의 UI와 기능 명칭은 release에 따라 바뀔 수 있습니다. 시험 준비 시 [공식 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-730)의 최신 terminology를 우선합니다.
+
+!!! info "출처"
+    [Microsoft Learn - Study guide for Exam AB-730](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-730), [Microsoft Learn - Microsoft 365 Copilot overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview), [Microsoft Learn - Extend Microsoft 365 Copilot with agents](https://learn.microsoft.com/en-us/microsoft-copilot-studio/microsoft-365-copilot-extend-with-agents)

@@ -69,3 +69,6 @@ Team member와 공유할 때는 대상 범위를 최소화하고, 설명과 sugg
 - Template은 시작점이며 knowledge와 instruction을 반드시 업무에 맞춥니다.
 - Capability는 최소한으로 구성하고 representative test를 수행합니다.
 - Agent 공유와 knowledge permission은 별도로 확인합니다.
+
+!!! info "출처"
+    [Microsoft Learn - Build agents by using Agent Builder in Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents), [Microsoft Learn - Agent templates overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-templates-overview), [Microsoft Learn - Set up Agent Store in Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-agent-store)

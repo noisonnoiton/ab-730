@@ -49,3 +49,6 @@ Copilot이 response를 만들 때 사용자의 identity와 resource permission�
 - Citation 존재 여부와 citation의 실제 내용 검증은 다른 단계입니다.
 - Copilot protection은 기존 permission과 policy를 기반으로 합니다.
 - 가장 좋은 완화책은 작업의 risk에 비례한 human review와 최소 권한입니다.
+
+!!! info "출처"
+    [Microsoft Learn - Data, Privacy, and Security for Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy), [Microsoft Learn - Enterprise data protection in Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection), [Microsoft - Responsible AI principles](https://www.microsoft.com/en-us/ai/responsible-ai)

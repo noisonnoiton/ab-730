@@ -55,3 +55,6 @@ Microsoft 365 Copilot은 Microsoft 365 service boundary와 기존 identity, perm
 - Copilot은 기존 permission을 존중하지만 oversharing 자체를 해결하지는 않습니다.
 - Chat은 범용 대화, agent는 구성된 knowledge와 instruction을 사용하는 반복 업무에 적합합니다.
 - Microsoft 365 app마다 현재 artifact에 맞춘 capability가 다릅니다.
+
+!!! info "출처"
+    [Microsoft Learn - Microsoft 365 Copilot overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview), [Microsoft Learn - Data, Privacy, and Security for Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy), [Microsoft Learn - Overview of Microsoft 365 Copilot Chat](https://learn.microsoft.com/en-us/copilot/overview)
