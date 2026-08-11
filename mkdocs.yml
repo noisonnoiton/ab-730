@@ -1,0 +1,90 @@
+site_name: AB-730 AI Business Professional
+site_description: AB-730 AI Business Professional 시험 대비 강의 자료
+site_url: https://noisonnoiton.github.io/ab-730/
+
+repo_url: https://github.com/noisonnoiton/ab-730
+edit_uri: ""
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: ko
+  font:
+    text: Noto Sans KR
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: 다크 모드로 전환
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: 라이트 모드로 전환
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - header.autohide
+    - content.code.copy
+    - content.tooltips
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - plantuml_markdown:
+      server: https://www.plantuml.com/plantuml
+      format: svg
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - 소개:
+      - Overview: index.md
+      - 시험 정보: exam/overview.md
+  - "Domain 1":
+      - Overview: domain1-generative-ai-fundamentals/index.md
+      - Microsoft 365의 생성형 AI: domain1-generative-ai-fundamentals/01-m365-experiences.md
+      - Responsible AI와 data protection: domain1-generative-ai-fundamentals/02-responsible-ai.md
+  - "Domain 2":
+      - Overview: domain2-prompts-conversations/index.md
+      - Prompt 작성과 관리: domain2-prompts-conversations/01-prompts.md
+      - Conversation 관리: domain2-prompts-conversations/02-conversations.md
+      - Copilot agent 관리: domain2-prompts-conversations/03-agents.md
+  - "Domain 3":
+      - Overview: domain3-business-content/index.md
+      - 문서와 communication 작성: domain3-business-content/01-documents-communications.md
+      - Meeting과 collaboration: domain3-business-content/02-meetings-collaboration.md
+  - 참고:
+      - 용어집: glossary.md
+
+plugins:
+  - search
+  - privacy:
+      assets: false
+      links_attr_map:
+        target: _blank
+      links_noopener: true
+
+extra_css:
+  - stylesheets/custom-colors.css

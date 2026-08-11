@@ -1,0 +1,17 @@
+[project]
+name = "ab-730"
+version = "0.1.0"
+description = "AB-730 (AI Business Professional) 강의 자료, 시험 대비 문서"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+docs = [
+  "mkdocs-material>=9.5,<10",
+  "plantuml-markdown>=3.10",
+]
+
+# Python package로 배포하지 않고 dependency와 도구만 관리
+[tool.uv]
+package = false
+index-url = "https://pypi.org/simple"
