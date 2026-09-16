@@ -49,6 +49,43 @@ Microsoft 365 app은 결과물의 lifecycle에 따라 연결됩니다.
 | Word proposal | Outlook | stakeholder에게 concise summary와 review 요청 |
 | Copilot chat result | Copilot Pages | 결과를 editable collaboration content로 공유 |
 
+```plantuml
+@startuml Content_Lifecycle
+skinparam defaultFontName Sans-Serif
+skinparam roundcorner 8
+skinparam rectangle {
+    BorderColor #4338ca
+    FontColor #312e81
+}
+skinparam note {
+    BorderColor #f59e0b
+    BackgroundColor #FEF3C7
+}
+
+rectangle "Teams\nmeeting recap" as Teams #EEF2FF
+rectangle "Word\nproject document" as Word #EDE9FE
+rectangle "Excel\nanalysis and insight" as Excel #F5F3FF
+rectangle "PowerPoint\npresentation" as PowerPoint #E0E7FF
+rectangle "Outlook\nsummary and review" as Outlook #EEF2FF
+rectangle "Copilot Pages\neditable shared content" as Pages #EDE9FE
+
+Teams -right-> Word : 결정과 action 정리
+Word -down-> Outlook : review 요청
+Excel -right-> PowerPoint : chart와 trend 전달
+Word -right-> PowerPoint : proposal을 발표 자료로 변환
+PowerPoint -down-> Pages : collaboration 공유
+
+note bottom of Word
+원본 link와 version 유지
+숫자, table, citation 확인
+end note
+
+note bottom of Outlook
+audience와 permission 재확인
+end note
+@enduml
+```
+
 ### 이동할 때 확인할 것
 
 - 숫자, table, citation이 손실되거나 바뀌지 않았는지 확인합니다.

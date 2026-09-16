@@ -21,6 +21,32 @@
 | 외부 발표나 고객 약속 | citation 원문 확인, 법무 또는 domain owner 승인 |
 | 인사, 재무, 안전 관련 결정 | AI 단독 결정을 피하고 정식 review process 적용 |
 
+```plantuml
+@startuml Verification_Escalation
+skinparam defaultFontName Sans-Serif
+skinparam roundcorner 8
+skinparam rectangle {
+    BorderColor #4338ca
+    FontColor #312e81
+}
+
+rectangle "개인 brainstorming\n논리와 관련성 확인" as A #EEF2FF
+rectangle "내부 email\ntone과 사실 관계 확인" as B #EDE9FE
+rectangle "임원 보고서\nsource, 숫자, 담당자 review" as C #F5F3FF
+rectangle "외부 발표 또는 고객 약속\ncitation, 법무 또는 domain owner 승인" as D #FEF3C7
+rectangle "인사, 재무, 안전 관련 결정\nAI 단독 결정 금지, 정식 review process" as E #FEE2E2
+
+A -down-> B : 영향도 증가
+B -down-> C
+C -down-> D
+D -down-> E
+note right of E
+위험이 커질수록
+검증과 human review를 강화
+end note
+@enduml
+```
+
 ### Citation 확인
 
 1. Citation이 실제 source를 가리키는지 엽니다.

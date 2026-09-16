@@ -12,6 +12,42 @@ Copilot은 meeting 전후의 업무를 연결하는 데 사용할 수 있습니�
 
 Meeting response의 범위는 transcript와 recording availability, 조직 policy, 사용자의 access에 영향을 받습니다. Copilot summary가 공식 회의록을 자동으로 확정하는 것은 아니므로 participant가 decision과 owner를 검토해야 합니다.
 
+```plantuml
+@startuml Meeting_Collaboration_Lifecycle
+skinparam defaultFontName Sans-Serif
+skinparam roundcorner 8
+skinparam rectangle {
+    BorderColor #4338ca
+    FontColor #312e81
+}
+skinparam frame {
+    BorderColor #6366f1
+    BorderStyle dashed
+    FontColor #4338ca
+}
+
+frame "Meeting 전" {
+    rectangle "Agenda, 관련 file 요약,\n질문 준비" as Before #EEF2FF
+}
+frame "Meeting 중" {
+    rectangle "논의 요약, 찬반 의견,\n놓친 내용 확인" as During #EDE9FE
+}
+frame "Meeting 후" {
+    rectangle "Recap\ndecision, action item, owner" as Recap #F5F3FF
+    rectangle "Transcript와 participant로\n정확성 검토" as Review #FEF3C7
+}
+rectangle "Copilot Pages 또는 Word\nshared, editable artifact" as Artifact #E0E7FF
+rectangle "다음 meeting\naction status를 source로 갱신" as Next #EEF2FF
+
+Before -right-> During
+During -right-> Recap
+Recap -down-> Review
+Review -right-> Artifact
+Artifact -down-> Next
+Next -left-> Before : 이전 action을 context로 활용
+@enduml
+```
+
 ### 좋은 follow-up 질문
 
 - `합의된 decision과 아직 합의되지 않은 항목을 분리해 줘.`

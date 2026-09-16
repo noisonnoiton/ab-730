@@ -18,6 +18,42 @@ source에서 확인되지 않는 내용은 추정하지 마.
 
 처음부터 완벽한 prompt를 만들기보다 response를 보고 누락된 context나 output 기준을 추가하는 iterative prompting이 효과적입니다.
 
+```plantuml
+@startuml Prompt_Refinement_Cycle
+skinparam defaultFontName Sans-Serif
+skinparam roundcorner 8
+skinparam rectangle {
+    BorderColor #4338ca
+    FontColor #312e81
+}
+skinparam diamond {
+    BorderColor #f59e0b
+    FontColor #92400e
+}
+
+actor "사용자" as U
+rectangle "Goal\n할 일과 목적" as G #EEF2FF
+rectangle "Context\naudience와 상황" as C #EDE9FE
+rectangle "Source\n근거 resource" as S #F5F3FF
+rectangle "Expectation\n형식, tone, 기준" as E #E0E7FF
+rectangle "Prompt 작성" as P #EEF2FF
+rectangle "Copilot response" as R #EDE9FE
+diamond "기대와 source에\n부합하는가?" as Q #FEF3C7
+rectangle "Goal, context, source,\nexpectation 보완" as F #F5F3FF
+
+U -right-> G
+G -right-> P
+C -down-> P
+S -up-> P
+E -left-> P
+P -right-> R
+R -right-> Q
+Q -down-> F : 아니오
+F -left-> P : 수정
+Q -up-> U : 예, 검토 후 사용
+@enduml
+```
+
 ## 적절한 resource 선택
 
 - 질문과 직접 관련된 최신 file을 우선합니다.

@@ -12,6 +12,33 @@
 
 같은 prompt라도 현재 app과 참조 resource가 다르면 결과가 달라집니다. 업무 자료가 중요한 질문은 file이나 message를 명시적으로 참조해 context를 좁혀야 합니다.
 
+```plantuml
+@startuml Copilot_Response_Context
+skinparam defaultFontName Sans-Serif
+skinparam roundcorner 8
+skinparam rectangle {
+    BorderColor #4338ca
+    FontColor #312e81
+}
+
+actor "사용자" as U
+rectangle "Prompt\n목표와 요구 사항" as P #EEF2FF
+rectangle "App context\n현재 app과 artifact" as C #EDE9FE
+database "Work data\n권한 있는 email, file, chat" as W #F5F3FF
+cloud "Web data\n공개 최신 정보" as D #E0E7FF
+rectangle "Microsoft 365 Copilot\nModel이 context를 해석" as M #EEF2FF
+rectangle "Response\n요약, 초안, 분석, 변환" as R #EDE9FE
+
+U -right-> P
+P -right-> M
+C -down-> M
+W -up-> M
+D -up-> M
+M -right-> R
+R -down-> U
+@enduml
+```
+
 ## 조직 정보 보호
 
 Microsoft 365 Copilot은 Microsoft 365 service boundary와 기존 identity, permission, compliance control 안에서 작동합니다.
