@@ -26,31 +26,18 @@ skinparam rectangle {
     BorderColor #4338ca
     FontColor #312e81
 }
-skinparam diamond {
-    BorderColor #f59e0b
-    FontColor #92400e
-}
-
 actor "사용자" as U
-rectangle "Goal\n할 일과 목적" as G #EEF2FF
-rectangle "Context\naudience와 상황" as C #EDE9FE
-rectangle "Source\n근거 resource" as S #F5F3FF
-rectangle "Expectation\n형식, tone, 기준" as E #E0E7FF
-rectangle "Prompt 작성" as P #EEF2FF
+rectangle "Prompt 설계\nGoal, context, source, expectation" as P #EEF2FF
 rectangle "Copilot response" as R #EDE9FE
-diamond "기대와 source에\n부합하는가?" as Q #FEF3C7
+rectangle "기대와 source에\n부합하는가?" as Q #FEF3C7
 rectangle "Goal, context, source,\nexpectation 보완" as F #F5F3FF
 
-U -right-> G
-G -right-> P
-C -down-> P
-S -up-> P
-E -left-> P
+U -right-> P
 P -right-> R
 R -right-> Q
 Q -down-> F : 아니오
-F -left-> P : 수정
-Q -up-> U : 예, 검토 후 사용
+F -left-> P : 다시 작성
+Q -right-> U : 예, 검토 후 사용
 @enduml
 ```
 
