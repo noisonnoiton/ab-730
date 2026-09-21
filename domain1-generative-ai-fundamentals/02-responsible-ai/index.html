@@ -1,0 +1,1507 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AB-730 AI Business Professional 시험 대비 강의 자료">
+      
+      
+      
+        <link rel="canonical" href="https://noisonnoiton.github.io/ab-730/domain1-generative-ai-fundamentals/02-responsible-ai/">
+      
+      
+        <link rel="prev" href="../01-m365-experiences/">
+      
+      
+        <link rel="next" href="../../domain2-prompts-conversations/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Responsible AI와 data protection - AB-730 AI Business Professional</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/custom-colors.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#responsible-ai-data-protection" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AB-730 AI Business Professional" class="md-header__button md-logo" aria-label="AB-730 AI Business Professional" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AB-730 AI Business Professional
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Responsible AI와 data protection
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/noisonnoiton/ab-730" title="저장소로 이동" class="md-source" data-md-component="source" target="_blank" rel="noopener">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  소개
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Domain 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../domain2-prompts-conversations/" class="md-tabs__link">
+          
+  
+  
+  Domain 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../domain3-business-content/" class="md-tabs__link">
+          
+  
+  
+  Domain 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  참고
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+  
+    
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AB-730 AI Business Professional" class="md-nav__button md-logo" aria-label="AB-730 AI Business Professional" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AB-730 AI Business Professional
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/noisonnoiton/ab-730" title="저장소로 이동" class="md-source" data-md-component="source" target="_blank" rel="noopener">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    소개
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    소개
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시험 정보
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Domain 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-m365-experiences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft 365의 생성형 AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsible AI와 data protection
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsible AI와 data protection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 risk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification 수준 선택
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification 수준 선택">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citation 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-protection-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data protection이 response를 제한하는 방식
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensitive-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensitive data를 다루는 순서
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        시험 포인트
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Domain 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain2-prompts-conversations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain2-prompts-conversations/01-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt 작성과 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain2-prompts-conversations/02-conversations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conversation 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain2-prompts-conversations/03-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot agent 관리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Domain 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain3-business-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain3-business-content/01-documents-communications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    문서와 communication 작성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain3-business-content/02-meetings-collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meeting과 collaboration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    참고
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    참고
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    용어집
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        주요 risk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification 수준 선택
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification 수준 선택">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citation 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-protection-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data protection이 response를 제한하는 방식
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensitive-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensitive data를 다루는 순서
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        시험 포인트
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+        </div>
+      </div>
+    </div>
+  
+
+  <aside class="kakao-adfit-rail" aria-label="광고">
+    <ins class="kakao_ad_area" style="display:none;"
+      data-ad-unit="DAN-oYnyqFed1jZhUtvA"
+      data-ad-width="160"
+      data-ad-height="600"></ins>
+  </aside>
+
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="responsible-ai-data-protection">Responsible AI와 data protection<a class="headerlink" href="#responsible-ai-data-protection" title="Permanent link">&para;</a></h1>
+<h2 id="risk">주요 risk<a class="headerlink" href="#risk" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>의미</th>
+<th>징후</th>
+<th>완화 방법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fabrication</td>
+<td>근거 없는 내용을 사실처럼 생성</td>
+<td>존재하지 않는 숫자, citation, 정책</td>
+<td>원본과 citation 대조, human review</td>
+</tr>
+<tr>
+<td>Prompt injection</td>
+<td>content 안의 악의적 instruction이 원래 목표를 바꿈</td>
+<td>무관한 작업 수행, data 공개 요구</td>
+<td>신뢰할 수 있는 source 사용, output 검토</td>
+</tr>
+<tr>
+<td>Over-reliance</td>
+<td>사용자가 AI output을 검증 없이 채택</td>
+<td>중요한 결정에 자동 적용</td>
+<td>책임자 승인, 업무 위험에 맞는 검토</td>
+</tr>
+<tr>
+<td>Sensitive data exposure</td>
+<td>prompt나 output에 보호 대상 data 포함</td>
+<td>공유 범위를 넘는 개인정보나 기밀</td>
+<td>permission, sensitivity label, 공유 대상 확인</td>
+</tr>
+</tbody>
+</table>
+<h2 id="verification">Verification 수준 선택<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
+<p>모든 output에 같은 검증 비용을 쓸 필요는 없습니다. 영향도와 되돌릴 수 있는 정도에 따라 검증을 강화합니다.</p>
+<table>
+<thead>
+<tr>
+<th>작업</th>
+<th>적절한 검증</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>개인 brainstorming</td>
+<td>논리와 관련성 확인</td>
+</tr>
+<tr>
+<td>내부 email 초안</td>
+<td>수신자, tone, 사실 관계 확인</td>
+</tr>
+<tr>
+<td>임원 보고서</td>
+<td>source와 숫자 대조, 담당자 review</td>
+</tr>
+<tr>
+<td>외부 발표나 고객 약속</td>
+<td>citation 원문 확인, 법무 또는 domain owner 승인</td>
+</tr>
+<tr>
+<td>인사, 재무, 안전 관련 결정</td>
+<td>AI 단독 결정을 피하고 정식 review process 적용</td>
+</tr>
+</tbody>
+</table>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGRhdGEtZGlhZ3JhbS10eXBlPSJERVNDUklQVElPTiIgc3R5bGU9IndpZHRoOjUyMHB4O2hlaWdodDo1NDNweDtiYWNrZ3JvdW5kOiNGRkZGRkY7IiB3aWR0aD0iNTIwcHgiIGhlaWdodD0iNTQzcHgiIHZpZXdCb3g9IjAgMCA1MjAgNTQzIiB6b29tQW5kUGFuPSJtYWduaWZ5IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyI+PD9wbGFudHVtbCAxLjIwMjYuOGJldGExPz48ZGVmcy8+PGcgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGxlbmd0aEFkanVzdD0ic3BhY2luZyI+PCEtLWVudGl0eSBBLS0+PGcgY2xhc3M9ImVudGl0eSIgZGF0YS1xdWFsaWZpZWQtbmFtZT0iQSIgaWQ9ImVudDAwMDEiIGRhdGEtc291cmNlLWxpbmU9IjgiPjxyZWN0IHg9IjY4Ljc4IiB5PSI3IiB3aWR0aD0iMTQ4LjU4NiIgaGVpZ2h0PSI1Mi41OTQiIGZpbGw9IiNFRUYyRkYiIHN0eWxlPSJzdHJva2U6IzQzMzhDQTtzdHJva2Utd2lkdGg6MC41OyIgcng9IjQiIHJ5PSI0Ii8+PHRleHQgeD0iNzguNzgiIHk9IjI5Ljk5NSIgZmlsbD0iIzMxMkU4MSIgZm9udC1zaXplPSIxNCIgdGV4dExlbmd0aD0iMTI4LjU4NiI+6rCc7J24IGJyYWluc3Rvcm1pbmc8L3RleHQ+PHRleHQgeD0iNzguNzgiIHk9IjQ2LjI5MiIgZmlsbD0iIzMxMkU4MSIgZm9udC1zaXplPSIxNCIgdGV4dExlbmd0aD0iMTExLjk0Ij7rhbzrpqzsmYAg6rSA66Co7ISxIO2ZleyduDwvdGV4dD48L2c+PCEtLWVudGl0eSBCLS0+PGcgY2xhc3M9ImVudGl0eSIgZGF0YS1xdWFsaWZpZWQtbmFtZT0iQiIgaWQ9ImVudDAwMDIiIGRhdGEtc291cmNlLWxpbmU9IjkiPjxyZWN0IHg9IjY1LjU1IiB5PSIxMzYuNTkiIHdpZHRoPSIxNTUuMDUxIiBoZWlnaHQ9IjUyLjU5NCIgZmlsbD0iI0VERTlGRSIgc3R5bGU9InN0cm9rZTojNDMzOENBO3N0cm9rZS13aWR0aDowLjU7IiByeD0iNCIgcnk9IjQiLz48dGV4dCB4PSI3NS41NSIgeT0iMTU5LjU4NSIgZmlsbD0iIzMxMkU4MSIgZm9udC1zaXplPSIxNCIgdGV4dExlbmd0aD0iNjguODE5Ij7rgrTrtoAgZW1haWw8L3RleHQ+PHRleHQgeD0iNzUuNTUiIHk9IjE3NS44ODIiIGZpbGw9IiMzMTJFODEiIGZvbnQtc2l6ZT0iMTQiIHRleHRMZW5ndGg9IjEzNS4wNTEiPnRvbmXqs7wg7IKs7IukIOq0gOqzhCDtmZXsnbg8L3RleHQ+PC9nPjwhLS1lbnRpdHkgQy0tPjxnIGNsYXNzPSJlbnRpdHkiIGRhdGEtcXVhbGlmaWVkLW5hbWU9IkMiIGlkPSJlbnQwMDAzIiBkYXRhLXNvdXJjZS1saW5lPSIxMCI+PHJlY3QgeD0iNDMuMDQiIHk9IjI1MC4xOSIgd2lkdGg9IjIwMC4wNTciIGhlaWdodD0iNTIuNTk0IiBmaWxsPSIjRjVGM0ZGIiBzdHlsZT0ic3Ryb2tlOiM0MzM4Q0E7c3Ryb2tlLXdpZHRoOjAuNTsiIHJ4PSI0IiByeT0iNCIvPjx0ZXh0IHg9IjUzLjA0IiB5PSIyNzMuMTg1IiBmaWxsPSIjMzEyRTgxIiBmb250LXNpemU9IjE0IiB0ZXh0TGVuZ3RoPSI2OC44NSI+7J6E7JuQIOuztOqzoOyEnDwvdGV4dD48dGV4dCB4PSI1My4wNCIgeT0iMjg5LjQ4MiIgZmlsbD0iIzMxMkU4MSIgZm9udC1zaXplPSIxNCIgdGV4dExlbmd0aD0iMTgwLjA1NyI+c291cmNlLCDsiKvsnpAsIOuLtOuLueyekCByZXZpZXc8L3RleHQ+PC9nPjwhLS1lbnRpdHkgRC0tPjxnIGNsYXNzPSJlbnRpdHkiIGRhdGEtcXVhbGlmaWVkLW5hbWU9IkQiIGlkPSJlbnQwMDA0IiBkYXRhLXNvdXJjZS1saW5lPSIxMSI+PHJlY3QgeD0iNyIgeT0iMzYzLjc4IiB3aWR0aD0iMjcyLjE0MyIgaGVpZ2h0PSI1Mi41OTQiIGZpbGw9IiNGRUYzQzciIHN0eWxlPSJzdHJva2U6IzQzMzhDQTtzdHJva2Utd2lkdGg6MC41OyIgcng9IjQiIHJ5PSI0Ii8+PHRleHQgeD0iMTciIHk9IjM4Ni43NzUiIGZpbGw9IiMzMTJFODEiIGZvbnQtc2l6ZT0iMTQiIHRleHRMZW5ndGg9IjE0Ni42Ij7smbjrtoAg67Cc7ZGcIOuYkOuKlCDqs6DqsJ0g7JW97IaNPC90ZXh0Pjx0ZXh0IHg9IjE3IiB5PSI0MDMuMDcyIiBmaWxsPSIjMzEyRTgxIiBmb250LXNpemU9IjE0IiB0ZXh0TGVuZ3RoPSIyNTIuMTQzIj5jaXRhdGlvbiwg67KV66y0IOuYkOuKlCBkb21haW4gb3duZXIg7Iq57J24PC90ZXh0PjwvZz48IS0tZW50aXR5IEUtLT48ZyBjbGFzcz0iZW50aXR5IiBkYXRhLXF1YWxpZmllZC1uYW1lPSJFIiBpZD0iZW50MDAwNSIgZGF0YS1zb3VyY2UtbGluZT0iMTIiPjxyZWN0IHg9IjguNzciIHk9IjQ3Ny4zOCIgd2lkdGg9IjI2OC42MTEiIGhlaWdodD0iNTIuNTk0IiBmaWxsPSIjRkVFMkUyIiBzdHlsZT0ic3Ryb2tlOiM0MzM4Q0E7c3Ryb2tlLXdpZHRoOjAuNTsiIHJ4PSI0IiByeT0iNCIvPjx0ZXh0IHg9IjE4Ljc3IiB5PSI1MDAuMzc1IiBmaWxsPSIjMzEyRTgxIiBmb250LXNpemU9IjE0IiB0ZXh0TGVuZ3RoPSIxNTUuNTAxIj7snbjsgqwsIOyerOustCwg7JWI7KCEIOq0gOugqCDqsrDsoJU8L3RleHQ+PHRleHQgeD0iMTguNzciIHk9IjUxNi42NzIiIGZpbGw9IiMzMTJFODEiIGZvbnQtc2l6ZT0iMTQiIHRleHRMZW5ndGg9IjI0OC42MTEiPkFJIOuLqOuPhSDqsrDsoJUg6riI7KeALCDsoJXsi50gcmV2aWV3IHByb2Nlc3M8L3RleHQ+PC9nPjxnIGNsYXNzPSJlbnRpdHkiIGRhdGEtcXVhbGlmaWVkLW5hbWU9IkdNTjEwIiBpZD0iZW50MDAxMSIgZGF0YS1zb3VyY2UtbGluZT0iMTkiPjxwYXRoIGQ9Ik0zMTIuMTgsNDg3LjU0IEwzMTIuMTgsNDk5LjY3IEwyNzcuNjMsNTAzLjY3IEwzMTIuMTgsNTA3LjY3IEwzMTIuMTgsNTE5LjgwNiBBNCw0IDAgMCAwIDMxNi4xOCw1MjMuODA2IEw1MDEuOTYzLDUyMy44MDYgQTQsNCAwIDAgMCA1MDUuOTYzLDUxOS44MDYgTDUwNS45NjMsNDkzLjU0IEw0OTUuOTYzLDQ4My41NCBMMzE2LjE4LDQ4My41NCBBNCw0IDAgMCAwIDMxMi4xOCw0ODcuNTQiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgZmlsbD0iI0ZFRkZERCIvPjxwYXRoIGQ9Ik00OTUuOTYzLDQ4My41NCBMNDk1Ljk2Myw0OTEuNTQgQTIsMiAwIDAgMCA0OTcuOTYzLDQ5My41NCBMNTA1Ljk2Myw0OTMuNTQgTDQ5NS45NjMsNDgzLjU0IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiIGZpbGw9IiNGRUZGREQiLz48dGV4dCB4PSIzMTguMTgiIHk9IjUwMC42MDciIGZpbGw9IiMwMDAiIGZvbnQtc2l6ZT0iMTMiIHRleHRMZW5ndGg9Ijg3Ljg1MiI+7JyE7ZeY7J20IOy7pOyniOyImOuhnTwvdGV4dD48dGV4dCB4PSIzMTguMTgiIHk9IjUxNS43NCIgZmlsbD0iIzAwMCIgZm9udC1zaXplPSIxMyIgdGV4dExlbmd0aD0iMTcyLjc4MyI+6rKA7Kad6rO8IGh1bWFuIHJldmlld+ulvCDqsJXtmZQ8L3RleHQ+PC9nPjwhLS1saW5rIEEgdG8gQi0tPjxnIGNsYXNzPSJsaW5rIiBkYXRhLWVudGl0eS0xPSJlbnQwMDAxIiBkYXRhLWVudGl0eS0yPSJlbnQwMDAyIiBpZD0ibG5rNiIgZGF0YS1zb3VyY2UtbGluZT0iMTQiIGRhdGEtbGluay10eXBlPSJkZXBlbmRlbmN5Ij48cGF0aCBkPSJNMTQzLjA3LDU5LjgxIEMxNDMuMDcsODIuMDcgMTQzLjA3LDEwOS4xOCAxNDMuMDcsMTMxLjQyIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7IiBmaWxsPSJub25lIiBpZD0iQS10by1CIi8+PHBvbHlnb24gcG9pbnRzPSIxNDMuMDcsMTM2LjQyLDE0Ny4wNywxMjcuNDIsMTQzLjA3LDEzMS40MiwxMzkuMDcsMTI3LjQyLDE0My4wNywxMzYuNDIiIGZpbGw9IiMxODE4MTgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7Ii8+PHRleHQgeD0iMTQ0LjA3IiB5PSIxMDIuNjU3IiBmaWxsPSIjMDAwIiBmb250LXNpemU9IjEzIiB0ZXh0TGVuZ3RoPSI2My45MzIiPuyYge2WpeuPhCDspp3qsIA8L3RleHQ+PC9nPjwhLS1saW5rIEIgdG8gQy0tPjxnIGNsYXNzPSJsaW5rIiBkYXRhLWVudGl0eS0xPSJlbnQwMDAyIiBkYXRhLWVudGl0eS0yPSJlbnQwMDAzIiBpZD0ibG5rNyIgZGF0YS1zb3VyY2UtbGluZT0iMTUiIGRhdGEtbGluay10eXBlPSJkZXBlbmRlbmN5Ij48cGF0aCBkPSJNMTQzLjA3LDE4OS40OSBDMTQzLjA3LDIwNy42NCAxNDMuMDcsMjI2Ljg4IDE0My4wNywyNDUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTsiIGZpbGw9Im5vbmUiIGlkPSJCLXRvLUMiLz48cG9seWdvbiBwb2ludHM9IjE0My4wNywyNTAsMTQ3LjA3LDI0MSwxNDMuMDcsMjQ1LDEzOS4wNywyNDEsMTQzLjA3LDI1MCIgZmlsbD0iIzE4MTgxOCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiLz48L2c+PCEtLWxpbmsgQyB0byBELS0+PGcgY2xhc3M9ImxpbmsiIGRhdGEtZW50aXR5LTE9ImVudDAwMDMiIGRhdGEtZW50aXR5LTI9ImVudDAwMDQiIGlkPSJsbms4IiBkYXRhLXNvdXJjZS1saW5lPSIxNiIgZGF0YS1saW5rLXR5cGU9ImRlcGVuZGVuY3kiPjxwYXRoIGQ9Ik0xNDMuMDcsMzAzLjA5IEMxNDMuMDcsMzIxLjIzIDE0My4wNywzNDAuNDggMTQzLjA3LDM1OC42IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7IiBmaWxsPSJub25lIiBpZD0iQy10by1EIi8+PHBvbHlnb24gcG9pbnRzPSIxNDMuMDcsMzYzLjYsMTQ3LjA3LDM1NC42LDE0My4wNywzNTguNiwxMzkuMDcsMzU0LjYsMTQzLjA3LDM2My42IiBmaWxsPSIjMTgxODE4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIvPjwvZz48IS0tbGluayBEIHRvIEUtLT48ZyBjbGFzcz0ibGluayIgZGF0YS1lbnRpdHktMT0iZW50MDAwNCIgZGF0YS1lbnRpdHktMj0iZW50MDAwNSIgaWQ9ImxuazkiIGRhdGEtc291cmNlLWxpbmU9IjE3IiBkYXRhLWxpbmstdHlwZT0iZGVwZW5kZW5jeSI+PHBhdGggZD0iTTE0My4wNyw0MTYuNjggQzE0My4wNyw0MzQuODMgMTQzLjA3LDQ1NC4wNyAxNDMuMDcsNDcyLjE5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7IiBmaWxsPSJub25lIiBpZD0iRC10by1FIi8+PHBvbHlnb24gcG9pbnRzPSIxNDMuMDcsNDc3LjE5LDE0Ny4wNyw0NjguMTksMTQzLjA3LDQ3Mi4xOSwxMzkuMDcsNDY4LjE5LDE0My4wNyw0NzcuMTkiIGZpbGw9IiMxODE4MTgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7Ii8+PC9nPjw/cGxhbnR1bWwtc3JjIExQN0RSamYwNThOdHluSE5PSGlNV0xRYk5MSlludlF3d0lQUkRiRHg4NVBYOVhnUlBiNUxTWUVkR2E1TGcxSXRlNjk0ZlZuOU9VNjBMSDZMbGYzZHlXdVRIdUlJYlFfbHRGZEVFTlZTem11X2Y5QXNtTU9Ec2NidmZrM1VNemZjaTQtdmN6emRxY2FHVHBDYUhPVlJiZjJTSUlYanp2ZGJLVHZpQ1ZYOEFhQlFKNVA1SXFaOEZJaU1Jbk9iNk5OVEFVdUxNNmNGVjJCYV93TVREMXZYajgxdGFaaFN6T0hpRXhuUHYtZmFnUXdjRUZHWEpObXJrUzdXM2JSM0s0X2swN01YMzNkM0Mwa2NrS3JJbnVkd3hHRGhLd1RMdnZ4V0I5cWwwTy1kc0JsOENFYXlzNlBLREFEY2wzSURSR1FFMF9wUDFwTEZxbGE0V3I2VGt3OFpCUk9Cc0J0NVNOeU5MMnpIbE5qVHdrR1Y3N1JxbUFmMnBkbms1Zl93bVU0WXl3RllxVWhSMkRJV2hxeEZHTUZKRTA4Q18tQU5odExrRUh4cjdDNHJUblFnUVY4dVBXa1RXZUN1b2pRRGZfVUZmY2pRbzMyQnJIVEZYQUE1SmdhalpnU1FlUnpYNW9WMVVkRUdwY0FTWDdMVVZnRXp0d1lwYXRLN3FhS05odHF6RldjbjV3dFptQTRLNWRGVDFwS1pLcENBSGU2R0NrSGp4SVJfTWtfajVVM1d5LWh4ZkplQjBBLVlERlA5UE5EUzlUTEROSUVySk1xR0JabTZxY2FVVTIwUS1YejdtVWg3MEFDNHlDeTVOZFVuRXIyXzhmQkVfMG9nZC13V3F3UHl4S2pUQlk2RG16Tm1kMzFrR3lSdzFtMDA/PjwvZz48L3N2Zz4=" class="uml" alt="uml diagram" title="" /></p>
+<h3 id="citation">Citation 확인<a class="headerlink" href="#citation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Citation이 실제 source를 가리키는지 엽니다.</li>
+<li>Source가 주장한 내용을 실제로 뒷받침하는지 확인합니다.</li>
+<li>작성 시점과 version이 현재 질문에 맞는지 확인합니다.</li>
+<li>여러 source가 충돌하면 authoritative source를 우선합니다.</li>
+</ol>
+<h2 id="data-protection-response">Data protection이 response를 제한하는 방식<a class="headerlink" href="#data-protection-response" title="Permanent link">&para;</a></h2>
+<p>Copilot이 response를 만들 때 사용자의 identity와 resource permission이 적용됩니다. 접근할 수 없는 file은 grounding source가 될 수 없으며, policy가 차단하는 content나 action은 결과에서 제한될 수 있습니다.</p>
+<div class="admonition note">
+<p class="admonition-title">제한된 결과의 해석</p>
+<p>원하는 답이 나오지 않는다고 protection을 우회하려 해서는 안 됩니다. 먼저 올바른 account인지, source permission이 적절한지, 필요한 resource를 prompt에 참조했는지 확인합니다.</p>
+</div>
+<h2 id="sensitive-data">Sensitive data를 다루는 순서<a class="headerlink" href="#sensitive-data" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Prompt에 꼭 필요한 data만 포함합니다.</li>
+<li>File의 sharing permission과 sensitivity label을 확인합니다.</li>
+<li>Output을 다른 app이나 Page로 옮길 때 새 공유 범위를 확인합니다.</li>
+<li>개인정보, credential, 계약 정보가 불필요하게 남지 않았는지 검토합니다.</li>
+<li>중요한 action은 human owner가 최종 승인합니다.</li>
+</ul>
+<h2 id="_1">시험 포인트<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>그럴듯한 response는 정확성의 증거가 아닙니다.</li>
+<li>Citation 존재 여부와 citation의 실제 내용 검증은 다른 단계입니다.</li>
+<li>Copilot protection은 기존 permission과 policy를 기반으로 합니다.</li>
+<li>가장 좋은 완화책은 작업의 risk에 비례한 human review와 최소 권한입니다.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">출처</p>
+<p><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy" target="_blank" rel="noopener">Microsoft Learn - Data, Privacy, and Security for Microsoft 365 Copilot</a>, <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection" target="_blank" rel="noopener">Microsoft Learn - Enterprise data protection in Microsoft 365 Copilot</a>, <a href="https://www.microsoft.com/en-us/ai/responsible-ai" target="_blank" rel="noopener">Microsoft - Responsible AI principles</a></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../01-m365-experiences/" class="md-footer__link md-footer__link--prev" aria-label="이전: Microsoft 365의 생성형 AI">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                Microsoft 365의 생성형 AI
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../domain2-prompts-conversations/" class="md-footer__link md-footer__link--next" aria-label="다음: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <div class="kakao-adfit-mobile" aria-label="광고">
+    <ins class="kakao_ad_area" style="display:none;"
+      data-ad-unit="DAN-zHXbzhtivpd6MTA0"
+      data-ad-width="250"
+      data-ad-height="250"></ins>
+  </div>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.tooltips", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  <script src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+  </body>
+</html>
